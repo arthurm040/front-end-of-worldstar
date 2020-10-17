@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>World Map</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="dataLoader.js"></script>
+    <style>
+
+        header{position: revert;}
+
+        .rbody{margin: 10px;}
+
+        #text1 p{
+            padding: 10px;
+            width: 60%;
+            margin: 5px;
+            font-size: 1.2em;
+            line-height: 1.4em;
+            text-align: justify;
+            text-indent: 3em;
+        }
+        #text3{
+            width: 60%;
+            padding: 10px;
+            margin-top: 5px;
+            font-size: 1.2em;
+        }
+
+        span{
+            font-style: italic;
+            color: red;
+        }
+
+        em{color: #6511a6;}
+
+        q{
+            display: block;
+            font-style: italic;
+        }
+
+        #image{
+            margin-top: -300px;
+            padding: 10px;
+            float: right;
+            width: 32%;
+            clear: both;
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #image img{
+            box-shadow:10px 10px 5px 0 rgba(50, 50, 50, 0.75);
+            margin: 20px;
+        }
+
+    </style>
+</head>
+<body style="background-color: #f0eded">
+
+<header>
+    <div class="firstNav">
+        <a href="index.html">Home</a>
+        <a id="account" href="account.html"></a>
+    </div>
+
+    <div class="logo">
+        <img src="img/earth.png" alt="">
+        <h1>SMALL WORLD</h1>
+        <ul>
+            <li> <a href="america.html">Americas</a></li>
+            <li><a href="africa.html">Africa</a></li>
+            <li><a href="europe.html">Europe</a></li>
+            <li><a href="asia.html">Asia</a></li>
+            <li><a href="oceania.html">Oceania</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="rbody" >
+    <img src="img/pangeaGif.gif" style="float: right; border: 3px solid #6511a6" alt="">
+
+    <div id="text1">
+        <p>Plate Tectonics is a theory that explains why we have continents and the various features of the earth’s oceans.
+            The world is divided into 9 major plates that move over the earth’s inner layer.
+            When these plates collide they create mountain ridges and valleys even on the ocean’s floor.
+            Some plates move up to 4 inches per year (sounds small but adds up given millions of years).
+            Author Becky Oskin explains the history attributed to that theory stating :
+            <q>While the Earth is 4.54 billion years old, because oceanic crust is constantly recycled at subduction zones, he oldest seafloor is only about 200 million years old).</q>
+            This video explains it well:</p>
+    </div>
+        <iframe width="50%" height="400" style="margin-left: 40px"
+                src="https://www.youtube.com/embed/KfYn9KVya-Q"  allow="accelerometer; autoplay; encrypted-media; gyroscope;
+                picture-in-picture" allowfullscreen></iframe>
+
+    <div id="image">
+        <p> Here are some of the more interesting former super continents</p>
+        <img src="img/Columbia(Nuna).jpg" alt="">
+        <img src="img/rodinia_335x335.jpg" alt="">
+        <img src="img/gondwana_335x335.jpg" alt="">
+        <img src="img/pangea_335x335.jpg" alt="">
+    </div>
+
+    <p id="text3">As a kid, I was very interested in geography,geology and world history and I probably knew the capital of every country in the world.
+        <span>(I definitely can't do that anymore)</span>
+        This project is what I would have loved to have when I was 6.
+        This is a dynamic webpage connected to a <em>MySQL database </em> and  using a <em>serverless function</em> to transfer data through a <em>REST API </em>.
+        Each continent includes capital, official languages, time zones and population data among other things.
+        This website also includes dynamically generated quizzes on each page to test your knowledge. A case insensitive searchbar allows you to search any content on the page.
+        My hope is that this is as instructive as it is entertaining.
+    </p>
+
+    <footer>
+        <a href="about.html">About me</a>
+    </footer>
+</div>
+
+</body>
+</html>

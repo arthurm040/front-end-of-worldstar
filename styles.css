@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Aleo&display=swap');
+
+/* reset browser styles */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1.2;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+ol {
+    padding-left: 1.4em;
+    list-style: decimal;
+}
+ul {
+    padding-left: 1.4em;
+    list-style: square;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: none;
+}
+/* end reset browser styles */
+@keyframes logoSlide {
+    from{transform: rotate(0) scale(.1) translate(-100px);}
+    50%{transform: rotate(-720deg) scale(.5) translate(0);}
+    to{transform:rotate(0) scale(1);} }
+@keyframes fadein {
+    from{opacity: 0;}
+    to{opacity: 1;} }
+
+body{box-sizing: border-box;  /* sets properties for entire screen */
+    max-width: 1600px;
+    background-color: lightgoldenrodyellow;
+    position: relative;
+    min-height: 100vh;
+}
+
+.firstNav {      /* this is the first half of the header*/
+    border-bottom: 2px solid gold;
+    padding-left: 10px;
+}
+.firstNav a{
+    padding-right: 12px;
+}
+
+.firstNav a:hover{
+    text-decoration: underline;
+}
+
+.links{
+    position: relative;
+    left: -20px;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+input{  /*deals with the search bar */
+    float: right;
+    width: 200px;
+    transition-property: border;
+    background: white url("img/search-icon_12x12.png") no-repeat 0;
+    border-radius: 10px;
+}
+input::placeholder{
+    padding-left: 10px;
+}
+input:focus{
+    background-image: none;
+    border-radius: 10px;
+}
+input:focus::placeholder{
+    opacity: 0;
+}
+
+header img{  /*controls the position of the img */
+    float: left;
+    padding: 5px;
+    animation: logoSlide 2s;
+    margin-right: 30px;
+}
+
+h1{ /*styles the title */
+    font-size: 4em;
+    text-shadow: 1px 5px snow;
+    font-family: "Aleo","Roboto Light",serif;
+}
+
+header{ /*the entire header bar */
+    z-index: 10;
+    position: sticky;
+    top: 0;
+    color: #6511a6;
+    background: rgb(253,253,255);
+    background: linear-gradient(90deg, rgba(253,253,255,1) 0%, rgba(83,83,154,1) 55%, rgba(40,40,84,1) 70%, rgba(13,13,99,0.9976365546218487) 100%);
+    border: 1px solid darkblue;
+    overflow: hidden; /*this keeps content in the box */
+}
+header li{ /* deals with the list items in the header */
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+header li a{ /*styles all links in header */
+    margin-right: 30px;
+    padding: 4px;
+    font-size: 2em;
+    color: black;
+    border: 1px solid darkblue;
+    border-radius: 18px;
+    text-decoration: none;
+    background-image: linear-gradient(rgba(255,255,255,1) 0%, rgba(83,83,154,1) 90%, rgba(40,40,84,1) 95%, rgba(13,13,99,0.9976365546218487)100%);
+    overflow: hidden;
+    box-shadow: 10px 1px 5px 0 rgba(79, 79, 79, 0.75);
+}
+header li a:hover{ /*controls behavior on hover*/
+    background-image: none;
+    background-color: #f0eded;;
+}
+
+
+.content{ /*controls the entire area with the divs*/
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    float: left;
+    margin: 0 auto;
+    background-color: #f0eded;
+}
+
+.box{ /*styles the cards */
+    color: #2e2b24;
+    animation-name: fadein;
+    animation-duration: 3s;
+    padding: 10px;
+    width: 350px;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    margin: 20px;
+    box-shadow:11px 11px 5px 0 rgba(50, 50, 50, 0.75);
+}
+
+.picture{
+    display: block;
+    margin: 20px auto;
+}
+
+.picture:hover{
+    transform: scale(1.2,1.2);
+    border: 2px solid #f0eded;
+    box-shadow: 10px 10px 5px 0 rgba(50, 50, 50, 0.75);
+}
+
+.box h2{ /*Styles the country name*/
+    font-family: Arial,sans-serif;
+    text-align: center;
+    font-size: 2em;
+    margin-top: 5px;
+}
+
+.box li{ /*styles the list items inside the cards*/
+    line-height: 1.2em;
+    font-size: 1.2em;
+    list-style-type: disc;
+    overflow-wrap: break-word;
+}
+
+aside{ /*Game section*/
+    width: 0;
+}
+
+button{
+    z-index: 100;
+    padding: 3px;
+    float: right;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: -40px;
+    margin-right: 20px;
+    align-content: center;
+    color: #6511a6;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    box-shadow: 5px 5px 5px 0 rgba(50, 50, 50, 0.75);
+    border-radius: 20px;
+}
+
+#button2{
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    float: none;
+}
+
+button:hover{
+   transform: scale(1.2,1.2);
+    cursor: pointer;
+}
+
+footer{
+    clear: both;
+    height: fit-content;
+    background-color: #f0eded;
+    text-align: center;
+    border-top: 1px solid darkblue;
+}
+
+footer a{
+    padding-right: 50px;
+    color: black;
+}
+
+aside input{
+    visibility: hidden;
+}
+
+label{
+    font-size: 1.5em;
+    line-height: 1.5em;
+    font-weight: bold;
+}
+
+label:hover{
+    cursor: pointer;
+    font-size: 2em;
+    line-height: 2em;
+    color: purple;
+    text-shadow: 2px 2px 1px gray;
+    text-decoration: underline;
+}
+
+.question{
+    width: 90%;
+    position: fixed;
+    top: 130px;
+    left: 30px;
+    margin: 40px auto 0 auto;
+}
+
+.results{
+    width: 90%;
+    font-size: 2em;
+    margin: 20px auto;
+}
+
+.results div{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.results img{
+    display: block;
+    justify-content: center;
+    padding-top: 20px;
+    margin: 0px auto;
+}
+
+.question p{
+    font-size: 2em;
+    margin-bottom: 20px;
+    border: 1px solid purple;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.question img{
+    width: 200px;
+    height: 120px;
+}
+
+#counter{
+    border: none;
+    float: right;
+    font-size: 2em;
+    font-weight: bold;
+    color: purple;
+}
+
+#countdown{
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-weight: bolder;
+    font-size: 2em;
+    color: purple;
+    text-align: center;
+}
